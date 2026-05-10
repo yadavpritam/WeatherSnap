@@ -1,77 +1,10 @@
 # WeatherSnap
 
-## 1. Project Overview
-WeatherSnap is a production-quality Android application that allows users to search for live weather data across global cities and create detailed weather reports. Users can capture real-time evidence using a custom integrated camera, apply automated image compression, and save annotated reports to a local database for future reference.
-
-### Tech Stack
-- **Language:** Kotlin
-- **UI:** Jetpack Compose + Material 3
-- **Architecture:** MVVM (ViewModel + StateFlow) + Clean Architecture
-- **Dependency Injection:** Hilt
-- **Navigation:** Navigation Compose with animated transitions
-- **Networking:** Retrofit + Gson + OkHttp Logging Interceptor
-- **Local Database:** Room Persistence Library
-- **Camera:** CameraX (Custom implementation)
-- **Async/Concurrency:** Coroutines + Flow
-- **Image Loading:** Coil
-- **Splash Screen:** AndroidX Core SplashScreen API
-
-## 2. Prerequisites
-- **Android Studio:** Hedgehog (2023.1.1) or newer
-- **Minimum SDK:** 26 (Android 8.0)
-- **Target SDK:** 34 (Android 14)
-- **Kotlin:** 1.9.0+
-- **JVM Target:** 17
-- Internet connection required for weather data and city geocoding
-
-## 3. Setup & Run
-1. Clone the repository:
-```bash
-   git clone https://github.com/yadavpritam/WeatherSnap.git
-```
-2. Open in Android Studio — select the root project folder
-3. No API keys required — the app uses Open-Meteo which is free
-4. Sync Gradle via `File > Sync Project with Gradle Files`
-5. Run on an emulator or physical device
-
-## 4. Camera Permission
-The app requires `CAMERA` permission at runtime.
-- Permission is requested when the user taps "Capture Photo" for the first time
-- Grant it when prompted to enable the custom camera
-
-## 5. Project Structure
-com.example.weathersnap
-├── data/       → Retrofit API, Room DB, repositories, mappers
-├── di/         → Hilt modules (Network, Database, Repository)
-├── domain/     → Data models, repository interfaces
-├── ui/         → Screens, ViewModels, Theme, Navigation
-└── util/       → ImageCompressor
-
-## 6. Screens
-- **Weather Screen** — City search with autocomplete, live weather display
-- **Create Report Screen** — Weather snapshot + camera photo + notes
-- **Custom Camera Screen** — CameraX full-screen capture interface
-- **Saved Reports Screen** — All saved reports from local Room DB
-
-## 7. Key Features
-- City autocomplete with in-memory caching (no repeated API calls)
-- Live weather via Open-Meteo (no API key needed)
-- Custom CameraX implementation — no device camera intent used
-- Image compression at ~70% quality, max 1024px
-- Room DB local storage, all ops on Dispatchers.IO
-- Olive Green Material 3 theme with slide/fade animations
-- Native Android 12+ Splash Screen API
-
-## 8. Bonus Features
-- Debug-only network logging via `HttpLoggingInterceptor`
-- All DB and image ops strictly on `Dispatchers.IO`
-- Animated state transitions using `Crossfade` and `AnimatedVisibility`
-
-Bas yeh poora copy karke apni README.md file mein replace kar do aur push kar do.You said: isko profatoaonal waay mein likhisko profatoaonal waay mein likh2:34 AMClaude responded: ---
-markdown# WeatherSnap
-
 A production-quality Android application for creating live weather reports
 with camera evidence, built as part of an Android internship assignment.
+
+## Screen Recording
+[▶ Watch Full App Demo](https://drive.google.com/file/d/13lcPeSm0NnfRLrGmucNpvYE2Ufd3vPJy/view?usp=sharing)
 
 ---
 
@@ -112,8 +45,7 @@ git clone https://github.com/yadavpritam/WeatherSnap.git
 
 1. Open the project in Android Studio
 2. Let Gradle sync automatically — no manual configuration needed
-3. No API keys required — the app uses [Open-Meteo](https://open-meteo.com),
-   which is free and open
+3. No API keys required — the app uses [Open-Meteo](https://open-meteo.com), which is free and open
 4. Run on a physical device or emulator (API 26+)
 
 ---
