@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.WeatherSnap" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">#D4E6B5</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.WeatherSnap.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#C8DFA0</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_weather_splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.WeatherSnap</item>
+    </style>
+</resources>
